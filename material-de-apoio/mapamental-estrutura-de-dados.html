@@ -1,0 +1,558 @@
+<h1>Arrays no JavaScript</h1>
+<h2>O que são Arrays</h2>
+<ul>
+  <li>Estrutura de dados para trabalhar com listas</li>
+  <li>Já implementada na linguagem JavaScript</li>
+  <li>Elementos identificados por índices inteiros (começando do 0)</li>
+</ul>
+<h2>Características</h2>
+<ul>
+  <li>Armazena qualquer tipo de dado</li>
+  <li>Tamanho dinâmico</li>
+  <li>
+    Várias funções úteis
+    <ul>
+      <li>Enfileirar e desenfileirar elementos (fila)</li>
+      <li>Empilhar e desempilhar elementos (pilha)</li>
+      <li>Descobrir índice de um valor</li>
+      <li>Cortar e concatenar Arrays</li>
+      <li>Entre outras</li>
+    </ul>
+  </li>
+</ul>
+<h2>Criando Arrays</h2>
+<ul>
+  <li>Utiliza colchetes <code>[]</code></li>
+  <li>Pode inicializar já com valores separados por vírgula</li>
+</ul>
+<h2>Manipulando Arrays</h2>
+<ul>
+  <li>Acessar posição: <code>array[índice]</code></li>
+  <li>Atribuir valor: <code>array[índice] = valor</code></li>
+  <li>Referenciar índices que não existem retorna <code>undefined</code></li>
+  <li>Pode pular índices na atribuição</li>
+</ul>
+
+<h1>Tema central: Arrays Bidimensionais (Matrizes) no Javascript</h1>
+<h2>O que são Arrays Bidimensionais</h2>
+<ul>
+  <li>
+    São arrays que possuem outros arrays dentro deles, com dois níveis de arrays
+    internos
+  </li>
+  <li>Podem ter várias dimensões, não só duas</li>
+  <li>Flexibilidade do Javascript permite ter arrays dentro de arrays</li>
+</ul>
+<h2>Como referenciar elementos</h2>
+<ul>
+  <li>Usando colchetes encadeados para acessar elementos internos</li>
+  <li>
+    array[1][2] -&gt; acessa posição 1 do array externo, depois posição 2 do
+    array interno
+  </li>
+</ul>
+<h2>Exemplo de Matriz (array bidimensional)</h2>
+<ul>
+  <li>Organizado como uma tabela, com linhas e colunas</li>
+  <li>Fácil visualização e referenciação de elementos</li>
+  <li>Útil para cálculos matemáticos comuns em matrizes</li>
+</ul>
+<h2>Iteração sobre arrays bidimensionais</h2>
+<ul>
+  <li>Usar loop FOR encadeados</li>
+  <li>Iterar sobre cada dimensão em um loop diferente</li>
+  <li>Permite acessar cada elemento individualmente</li>
+</ul>
+<h2>Manipulação via métodos de Array</h2>
+<ul>
+  <li>Métodos como push, pop, slice etc funcionam normalmente</li>
+  <li>Referenciar array interno para manipulá-lo especificamente</li>
+</ul>
+
+<h1>Objetos no JavaScript</h1>
+<h2>O que são objetos</h2>
+<ul>
+  <li>Estruturas para trabalhar com dicionários chave-valor</li>
+  <li>Chave-valor = par com uma chave (identificador) e um valor associado</li>
+  <li>Chamado de &quot;propriedade&quot; em um objeto</li>
+</ul>
+<h2>Propriedades</h2>
+<ul>
+  <li>A chave é como o &quot;nome&quot; da propriedade</li>
+  <li>O valor é o dado armazenado na propriedade</li>
+</ul>
+<h2>Diferenças para arrays</h2>
+<ul>
+  <li>Elementos não possuem sequência ou ordem</li>
+</ul>
+<h2>Tipos de dados</h2>
+<ul>
+  <li>
+    Propriedades podem armazenar qualquer tipo de dado (strings, números,
+    booleanos, arrays, outros objetos)
+  </li>
+</ul>
+<h2>Criação de objetos</h2>
+<ul>
+  <li>Utilizando chaves <code>{}</code></li>
+  <li><code>let objeto = {}</code> cria um objeto vazio</li>
+</ul>
+<h2>Acessando propriedades</h2>
+<ul>
+  <li>Encadeamento com ponto: <code>objeto.prop</code></li>
+  <li>
+    Colchetes: <code>objeto[&quot;prop&quot;]</code> permite acesso dinâmico
+  </li>
+</ul>
+<h2>Exemplos</h2>
+<ul>
+  <li><code>pessoa.nome = &quot;João&quot;</code></li>
+  <li><code>pessoa.idade = 25</code></li>
+  <li><code>pessoa.endereço = {rua: &quot;Av. Brasil&quot;}</code></li>
+  <li>Objetos permitem estruturas de dados flexíveis e complexas</li>
+</ul>
+
+<h1>Funções no JavaScript</h1>
+<h2>O que é uma função?</h2>
+<ul>
+  <li>
+    Estrutura que permite declarar um procedimento e executá-lo
+    programaticamente
+  </li>
+  <li>Bloco de código que pode ser armazenado e executado quando necessário</li>
+  <li>Pode executar o mesmo código várias vezes</li>
+</ul>
+<h2>Partes de uma função</h2>
+<ul>
+  <li>Entrada (parâmetros/argumentos) [opcional]</li>
+  <li>Procedimento</li>
+  <li>Saída (retorno) [opcional]</li>
+</ul>
+<h2>Sintaxe</h2>
+<pre><code class="language-js">function nomeDaFuncao() {  // procedimentos}</code></pre>
+<ul>
+  <li><code>function</code> - palavra reservada</li>
+  <li><code>nomeDaFuncao</code> - nome da função</li>
+  <li><code>()</code> - parâmetros (mesmo que vazio)</li>
+  <li><code>{}</code> - corpo da função</li>
+</ul>
+<h2>Utilização</h2>
+<ul>
+  <li>Declaração</li>
+  <li>Chamada:</li>
+</ul>
+<pre><code class="language-js">nomeDaFuncao();</code></pre>
+<ul>
+  <li>Pode chamar quantas vezes quiser</li>
+</ul>
+<h2>Resumo</h2>
+<ul>
+  <li>Permite reutilizar código</li>
+  <li>Declara um procedimento</li>
+  <li>Executa programaticamente com <code>()</code></li>
+  <li>Pode ter entradas e saídas (opcionais)</li>
+</ul>
+
+<h1>Tema central: Parâmetros de funções</h1>
+<h2>O que são parâmetros</h2>
+<ul>
+  <li>Entradas de uma função</li>
+  <li>Variáveis disponíveis dentro da função</li>
+  <li>Informadas quando a função é chamada</li>
+</ul>
+<h2>Declarando parâmetros</h2>
+<ul>
+  <li>Declarados dentro dos parênteses na função</li>
+  <li>Pode ter quantos parâmetros quiser</li>
+  <li>Separados por vírgula</li>
+</ul>
+<h2>Chamando a função com parâmetros</h2>
+<ul>
+  <li>Passa os valores dentro dos parênteses</li>
+  <li>Na mesma ordem em que foram declarados</li>
+  <li>Ordem é muito importante!</li>
+</ul>
+<h2>Parâmetros opcionais</h2>
+<ul>
+  <li>Podem ter valores padrão</li>
+  <li>Devem ser declarados por último!</li>
+</ul>
+<h2>Dica: Objeto como parâmetro</h2>
+<ul>
+  <li>Transforma múltiplos parâmetros em um objeto</li>
+  <li>Facilita chamada da função</li>
+  <li>Código mais legível</li>
+</ul>
+
+<p>TEMA CENTRAL: Retorno de funções no JavaScript</p>
+<ul>
+  <li>
+    <p>O que é o retorno de uma função (return)</p>
+    <ul>
+      <li>É o valor de saída que a função devolve</li>
+      <li>
+        Permite trabalhar com valores gerados dentro da função em outros locais
+        do código
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Utilizando return</p>
+    <ul>
+      <li>
+        Atribuindo a uma variável para usar depois
+        <ul>
+          <li>Ex: resultado = calcularMedia(5, 7)</li>
+        </ul>
+      </li>
+      <li>
+        Chamando a função diretamente
+        <ul>
+          <li>Ex: console.log(calcularMedia(5, 7))</li>
+        </ul>
+      </li>
+      <li>
+        Pode retornar qualquer expressão, não precisa ser uma variável
+        <ul>
+          <li>Ex: return base * altura</li>
+        </ul>
+      </li>
+      <li>
+        Pode chamar outra função
+        <ul>
+          <li>Ex: return areaRetangular(lado, lado)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Regras do return</p>
+    <ul>
+      <li>
+        Função só pode ter um único return
+        <ul>
+          <li>Depois que é chamado, função é finalizada</li>
+        </ul>
+      </li>
+      <li>
+        Exceção: Blocos condicionais (if/else) podem ter vários
+        <ul>
+          <li>Cada ramificação pode ter seu próprio return</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<p>
+  Esse é um resumo abrangente dos principais pontos sobre retorno de funções
+  abordados no vídeo. Foi explicado o conceito de return, formas de utilizá-lo,
+  regras e exemplos. Usei uma estrutura de mapa mental destacando o tema central
+  e os tópicos principais em tópicos e subtópicos.
+</p>
+
+<h1>Tema central: Escopo no JavaScript</h1>
+<h2>Escopo</h2>
+<ul>
+  <li>Contexto onde a variável foi declarada</li>
+  <li>Pode ser mais externo ou mais interno</li>
+</ul>
+<h2>Escopo externo vs interno</h2>
+<ul>
+  <li>
+    Variáveis declaradas no escopo externo podem ser usadas no escopo interno
+  </li>
+  <li>O contrário não é verdadeiro</li>
+</ul>
+<h2>var vs let</h2>
+<ul>
+  <li>var fica disponível no escopo externo, o que pode causar confusão</li>
+  <li>let só fica disponível no escopo onde foi declarada</li>
+  <li>Por isso, recomenda-se usar let ao invés de var</li>
+</ul>
+<h2>Função com var</h2>
+<ul>
+  <li>Mesmo declarando var dentro de função, não fica disponível fora dela</li>
+  <li>Diferente de quando usado em blocos como if, else etc</li>
+</ul>
+<h2>var &quot;içado&quot; para o topo</h2>
+<ul>
+  <li>Declarações var são &quot;içadas&quot; para o topo do arquivo</li>
+  <li>A variável é criada sem valor e depois recebe o valor mais abaixo</li>
+</ul>
+
+<h1>Funções Recursivas</h1>
+<h2>Conceito</h2>
+<ul>
+  <li>
+    Função que chama a si mesma, criando uma pilha de chamadas que se repetem
+  </li>
+  <li>
+    Muito usada para simplificar e quebrar problemas complexos em problemas
+    menores
+  </li>
+</ul>
+<h2>Estrutura</h2>
+<ul>
+  <li>
+    Caso base: condição de parada para evitar loop infinito
+    <ul>
+      <li>Ex: fatorial de 0 ou 1 retorna 1</li>
+    </ul>
+  </li>
+  <li>
+    Chamada recursiva: função chama a si mesma passando valores diferentes
+    <ul>
+      <li>Ex: fatorial chamando fatorial com número menor</li>
+    </ul>
+  </li>
+</ul>
+<h2>Exemplos</h2>
+<ul>
+  <li>Dividir número por 2 recursivamente até não ser mais par</li>
+  <li>Dobrar número infinitamente até estourar pilha</li>
+  <li>
+    Calcular fatorial multiplicando número por fatorial do número anterior
+  </li>
+</ul>
+<h2>Cuidados</h2>
+<ul>
+  <li>Evitar chamadas infinitas: ter o caso base</li>
+  <li>Respeitar tamanho máximo da pilha de chamadas</li>
+</ul>
+<h2>Aplicações</h2>
+<ul>
+  <li>Simplificar problemas complexos</li>
+  <li>Algoritmos matemáticos como fatorial</li>
+  <li>Não muito usada no curso mas bom conhecer o conceito</li>
+</ul>
+
+<h1>Funções Anônimas no JavaScript</h1>
+<h2>O que são funções anônimas?</h2>
+<ul>
+  <li>Funções que não tem nome</li>
+  <li>
+    Úteis para:
+    <ul>
+      <li>Armazenar funções em variáveis de forma mais simples</li>
+      <li>
+        Ter flexibilidade para mudar comportamento de funções dinamicamente
+      </li>
+    </ul>
+  </li>
+</ul>
+<h2>Características</h2>
+<ul>
+  <li>
+    <p>Funções são tratadas como valores em JS</p>
+    <ul>
+      <li>
+        Podem ser:
+        <ul>
+          <li>Passadas como argumentos</li>
+          <li>Armazenadas em variáveis</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Funções anônimas:</p>
+    <ul>
+      <li>Não podem existir sozinhas no código</li>
+      <li>Devem ser armazenadas em variáveis</li>
+    </ul>
+  </li>
+</ul>
+<h2>Diferenças para funções nomeadas</h2>
+<ul>
+  <li>
+    Funções nomeadas:
+    <ul>
+      <li>Jogadas para o topo do código</li>
+      <li>Disponíveis antes da declaração</li>
+    </ul>
+  </li>
+  <li>
+    Funções anônimas:
+    <ul>
+      <li>Só disponíveis após a declaração</li>
+      <li>Devem ser declaradas antes de serem chamadas</li>
+    </ul>
+  </li>
+</ul>
+<h2>Casos de uso</h2>
+<ul>
+  <li>Mudar comportamento de funções dinamicamente</li>
+  <li>Passar funções como argumentos</li>
+  <li>Mais aplicações serão vistas futuramente</li>
+</ul>
+
+<h1>High Order Functions</h1>
+<h2>O que são?</h2>
+<ul>
+  <li>Funções que recebem outras funções como parâmetro</li>
+  <li>
+    Utilizam o conceito de funções como valores no JS (paradigma funcional)
+  </li>
+  <li>
+    A função externa que recebe a outra função como parâmetro é chamada de High
+    Order Function
+  </li>
+</ul>
+<h2>Exemplos</h2>
+<h3>Função calcular</h3>
+<ul>
+  <li>Recebe dois valores A e B</li>
+  <li>Recebe também uma função &quot;operação&quot;</li>
+  <li>Dentro dela, chama a função &quot;operação&quot; passando A e B</li>
+  <li>Assim podemos mudar a operação passando funções diferentes</li>
+</ul>
+<h3>Array.forEach</h3>
+<ul>
+  <li>Método de array que executa uma função para cada elemento</li>
+  <li>Recebe uma função de callback</li>
+  <li>Exemplo de High Order Function muito usada</li>
+</ul>
+<h2>Vantagens</h2>
+<ul>
+  <li>Código mais funcional e organizado</li>
+  <li>Facilita a manutenção e legibilidade</li>
+  <li>Permite reutilização</li>
+</ul>
+<h2>Uso com funções anônimas</h2>
+<ul>
+  <li>Funções anônimas são muito usadas como callbacks</li>
+  <li>Permitem escrever a função na chamada da High Order Function</li>
+  <li>Sem precisar definir um nome e depois passar</li>
+</ul>
+
+<h1>Tema Central:</h1>
+<p>Métodos de Arrays (High Order Functions)</p>
+<h2>Map</h2>
+<ul>
+  <li>Serve para transformar Arrays</li>
+  <li>Cria um novo Array baseado no Array existente</li>
+  <li>Faz um &quot;mapeamento&quot; do Array antigo para um novo Array</li>
+  <li>Recebe uma função callback que é executada para cada elemento</li>
+</ul>
+<h2>Filter</h2>
+<ul>
+  <li>Serve para filtrar elementos de um Array</li>
+  <li>Cria um novo Array apenas com os elementos filtrados</li>
+  <li>Também recebe uma função callback</li>
+  <li>O retorno da função determina quais elementos entram no novo Array</li>
+</ul>
+<h2>Reduce</h2>
+<ul>
+  <li>Também transforma o Array, assim como Map e Filter</li>
+  <li>
+    Pode transformar o Array em outro tipo de dado (número, string, objeto,
+    etc.)
+  </li>
+  <li>Funciona &quot;acumulando&quot; valores entre as iterações</li>
+  <li>
+    Recebe uma função callback onde o primeiro parâmetro é o &quot;valor
+    acumulado&quot;
+  </li>
+  <li>Necessita de um valor inicial para esse &quot;valor acumulado&quot;</li>
+</ul>
+
+<h1>Métodos de Array em JavaScript</h1>
+<h2>Tema central</h2>
+<p>
+  Aprender sobre 4 métodos importantes para trabalhar com arrays em JavaScript:
+  map, filter, reduce e sort.
+</p>
+<h2>map</h2>
+<ul>
+  <li>
+    Percorre o array e retorna um novo array com o resultado da função de
+    callback aplicada a cada elemento
+  </li>
+  <li>Não modifica o array original</li>
+</ul>
+<h2>filter</h2>
+<ul>
+  <li>
+    Filtra o array retornando um novo array apenas com os elementos que passaram
+    no teste da função callback
+  </li>
+  <li>Também não altera o array original</li>
+</ul>
+<h2>reduce</h2>
+<ul>
+  <li>
+    Executa uma função callback para cada elemento do array, retornando um único
+    valor que é o acumulador final
+  </li>
+  <li>Útil para calcular total, média etc.</li>
+</ul>
+<h2>sort</h2>
+<ul>
+  <li>Ordena os elementos do array</li>
+  <li><strong>Modifica o array original</strong></li>
+  <li>Usa função callback que compara elementos para ordená-los</li>
+  <li>Pode usar slice() antes para não modificar array original</li>
+</ul>
+<p>
+  No geral, map, filter e reduce retornam novo array, enquanto sort modifica o
+  array.
+</p>
+
+<h1>Objetos globais no Javascript</h1>
+<h2>O que são?</h2>
+<ul>
+  <li>Objetos padrão da linguagem Javascript</li>
+  <li>Ficam sempre disponíveis para uso no código</li>
+  <li>
+    Funcionam como estruturas como condicionais e repetições (if, switch, while,
+    for)
+  </li>
+  <li>São objetos de fato, com propriedades e métodos</li>
+</ul>
+<h2>Diferença para o objeto window</h2>
+<ul>
+  <li>window: objeto que representa o escopo global no navegador</li>
+  <li>
+    Objetos globais: disponíveis independente do ambiente (navegador, Node.js
+    etc.)
+  </li>
+</ul>
+<h2>Exemplos</h2>
+<ul>
+  <li>Object</li>
+  <li>Array</li>
+  <li>String</li>
+  <li>Number</li>
+  <li>Math</li>
+  <li>Date</li>
+</ul>
+<h3>Object</h3>
+<ul>
+  <li>Permite criar objetos vazios</li>
+</ul>
+<h3>Array</h3>
+<ul>
+  <li>Permite criar arrays (listas)</li>
+</ul>
+<h3>String</h3>
+<ul>
+  <li>Converte valores em string: números, booleanos, funções</li>
+</ul>
+<h3>Number</h3>
+<ul>
+  <li>Converte strings em números</li>
+</ul>
+<h3>Math</h3>
+<ul>
+  <li>Funções matemáticas: número pi, potenciação, raiz quadrada etc.</li>
+</ul>
+<h3>Date</h3>
+<ul>
+  <li>Trabalhar com datas e horas</li>
+</ul>
+<h2>Características</h2>
+<ul>
+  <li>Nomes com letras maiúsculas</li>
+  <li>Possuem propriedades e métodos úteis</li>
+  <li>Evitam reinventar a roda: funcionalidades prontas</li>
+</ul>

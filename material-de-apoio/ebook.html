@@ -1,0 +1,496 @@
+<h1>Arrays no JavaScript</h1>
+<h2>Introdução aos Arrays</h2>
+<p>
+  Os Arrays são uma estrutura de dados importante no JavaScript que permite
+  armazenar e manipular coleções de elementos.
+</p>
+<p>
+  Um Array pode conter elementos de qualquer tipo, como números, strings,
+  boleanos, objetos e até mesmo outros Arrays. Cada elemento é identificado por
+  um índice numérico que começa em 0.
+</p>
+<pre><code class="language-js">// Exemplo de Array com elementos de tipos diferentesconst meuArray = [5, &quot;Maria&quot;, true, {nome: &quot;João&quot;}, [1, 2]];</code></pre>
+<p>Os principais benefícios de usar Arrays são:</p>
+<ul>
+  <li>Armazenar múltiplos valores em uma única variável</li>
+  <li>
+    Acessar, iterar e manipular os elementos facilmente por meio do índice
+  </li>
+  <li>
+    Adicionar e remover elementos dinamicamente, alterando o tamanho do Array
+  </li>
+</ul>
+<p>
+  Veremos agora com mais detalhes como criar, acessar elementos e realizar
+  diversas operações com Arrays no JavaScript.
+</p>
+<h2>Criando Arrays</h2>
+<p>Há duas formas principais de criar um Array:</p>
+<h3>1. Utilizando Colchetes []</h3>
+<p>
+  Para criar um Array vazio, basta declarar uma variável e atribuir a ela um par
+  de colchetes <code>[]</code>:
+</p>
+<pre><code class="language-js">const arr = [];</code></pre>
+<p>
+  Também é possível já inicializar o Array com alguns elementos, separando-os
+  por vírgula dentro dos colchetes:
+</p>
+<pre><code class="language-js">const numeros = [5, 10, 15, 20];</code></pre>
+<h3>2. Utilizando o Construtor Array()</h3>
+<p>
+  Outra forma é utilizando o construtor <code>Array()</code>, passando como
+  parâmetro o tamanho do Array:
+</p>
+<pre><code class="language-js">const nomes = new Array(3); // cria Array de tamanho 3</code></pre>
+<p>Ou já inicializando com valores:</p>
+<pre><code class="language-js">const frutas = new Array(&quot;Maçã&quot;, &quot;Banana&quot;, &quot;Laranja&quot;);</code></pre>
+<p>
+  A forma mais comum é utilizando colchetes <code>[]</code>, por ser mais
+  simples e direta.
+</p>
+<h2>Acessando Elementos</h2>
+<p>
+  Para acessar um elemento específico de um Array, utilizamos a notação de
+  colchetes <code>[]</code>, passando dentro deles o índice numérico desejado,
+  lembrando que o primeiro elemento está no índice 0:
+</p>
+<pre><code class="language-js">const cores = [&quot;vermelho&quot;, &quot;verde&quot;, &quot;azul&quot;]; cores[0]; // retorna &quot;vermelho&quot; cores[1]; // retorna &quot;verde&quot;cores[2]; // retorna &quot;azul&quot;</code></pre>
+<p>Caso o índice não exista, será retornado <code>undefined</code>.</p>
+<p>
+  Também é possível modificar um elemento do Array utilizando a notação de
+  colchetes para acessá-lo e o operador de atribuição (<code>=</code>) para
+  alterar seu valor:
+</p>
+<pre><code class="language-js">let numeros = [5, 10, 15];numeros[1] = 20; // agora numeros = [5, 20, 15]  </code></pre>
+<h2>Propriedades e Métodos</h2>
+<p>
+  Os Arrays possuem propriedades e métodos próprios que permitem inspecionar e
+  manipular os elementos. Alguns dos mais utilizados são:
+</p>
+<p>
+  <strong>length</strong> - retorna o tamanho do Array, ou seja, número de
+  elementos:
+</p>
+<pre><code class="language-js">const carros = [&quot;Ferrari&quot;, &quot;Fusca&quot;, &quot;Palio&quot;];carros.length; // 3</code></pre>
+<p><strong>push()</strong> - adiciona novo elemento ao final do Array:</p>
+<pre><code class="language-js">const alunos = [&quot;João&quot;, &quot;Maria&quot;];alunos.push(&quot;José&quot;); // agora alunos = [&quot;João&quot;, &quot;Maria&quot;, &quot;José&quot;]</code></pre>
+<p><strong>pop()</strong> - remove o último elemento do Array:</p>
+<pre><code class="language-js">const frutas = [&quot;Banana&quot;, &quot;Maçã&quot;, &quot;Uva&quot;];frutas.pop();// frutas = [&quot;Banana&quot;, &quot;Maçã&quot;]  </code></pre>
+<p><strong>unshift()</strong> - adiciona elemento ao início do Array:</p>
+<pre><code class="language-js">const num = [2, 3, 4];num.unshift(1);// agora num = [1, 2, 3, 4] </code></pre>
+<p><strong>shift()</strong> - remove o primeiro elemento do Array:</p>
+<pre><code class="language-js">const num = [5, 2, 6]; num.shift();// agora num = [2, 6]</code></pre>
+<p>
+  E muitos outros! Consulte a documentação para ver todos os métodos
+  disponíveis.
+</p>
+<h2>Iterando em Arrays</h2>
+<p>
+  Podemos percorrer todos os elementos de um Array utilizando laços de
+  repetição, como o for:
+</p>
+<pre><code class="language-js">const frutas = [&quot;Maçã&quot;, &quot;Banana&quot;, &quot;Laranja&quot;];for(let i = 0; i &lt; frutas.length; i++) {  console.log(frutas[i]); }// imprime cada fruta no console</code></pre>
+<p>Outra forma é utilizando o método forEach():</p>
+<pre><code class="language-js">frutas.forEach(function(fruta) {  console.log(fruta)  });// também imprime cada fruta no console</code></pre>
+<p>
+  O forEach() recebe uma função callback que é executada para cada elemento.
+</p>
+<p>Existem diversas formas de iterar Arrays, cada uma com suas vantagens.</p>
+<h2>Verificando se é Array</h2>
+<p>
+  Podemos verificar se uma variável é um Array utilizando o método
+  Array.isArray():
+</p>
+<pre><code class="language-js">const carros = [&quot;Ferrari&quot;, &quot;Fusca&quot;, &quot;Palio&quot;];Array.isArray(carros); // trueArray.isArray({nome: &quot;João&quot;}); // false</code></pre>
+<p>Retorna true caso seja um Array, e false para qualquer outro tipo.</p>
+<h2>Convertendo em String</h2>
+<p>
+  Para converter um Array em String, basta utilizar o método join(), que recebe
+  um separador como parâmetro:
+</p>
+<pre><code class="language-js">const frutas = [&quot;Banana&quot;, &quot;Maçã&quot;, &quot;Laranja&quot;];frutas.join(); // Banana,Maçã,Laranja frutas.join(&quot; | &quot;); // Banana | Maçã | Laranja</code></pre>
+<p>Por padrão o separador é vírgula, mas pode ser definido.</p>
+<h2>Ordenando Arrays</h2>
+<p>Podemos ordenar os elementos de um Array com o método sort():</p>
+<pre><code class="language-js">const numbers = [4, 2, 8, 1];numbers.sort(); // numbers agora é [1, 2, 4, 8]</code></pre>
+<p>
+  Por padrão ele ordena os elementos alfabeticamente. Para ordenar números,
+  deve-se passar uma função callback de comparação:
+</p>
+<pre><code class="language-js">numbers.sort(function(a, b) {  return a - b; });// agora está ordenado numericamente</code></pre>
+<p>Existem diversas formas de ordenação que podem ser implementadas.</p>
+<h2>Buscando elementos</h2>
+<p>Alguns métodos úteis para buscar elementos são:</p>
+<p>
+  <strong>indexOf()</strong> - retorna o primeiro índice em que um elemento é
+  encontrado:
+</p>
+<pre><code class="language-js">const frutas = [&quot;Banana&quot;, &quot;Caju&quot;, &quot;Banana&quot; ] frutas.indexOf('Banana') // 0</code></pre>
+<p><strong>lastIndexOf()</strong> - retorna o último índice do elemento:</p>
+<pre><code class="language-js">frutas.lastIndexOf('Banana') // 2</code></pre>
+<p>
+  <strong>find()</strong> - retorna o primeiro elemento que satisfaz a condição:
+</p>
+<pre><code class="language-js">const numbers = [4, 9, 16, 25, 29];numbers.find(x =&gt; x &gt; 20); // 25</code></pre>
+<p>
+  <strong>findIndex()</strong> - retorna o índice do primeiro elemento que
+  satisfaz a condição:
+</p>
+<pre><code class="language-js">numbers.findIndex(x =&gt; x &gt; 20); // 3</code></pre>
+<p><strong>includes()</strong> - retorna true se o array possuir o elemento:</p>
+<pre><code class="language-js">numbers.includes(25); // true</code></pre>
+<p>Estes são alguns métodos que permitem buscar elementos de forma prática.</p>
+<h2>Removendo elementos</h2>
+<p>Alguns métodos para remoção de elementos:</p>
+<p>
+  <strong>pop() / shift()</strong> - removem o último e o primeiro elemento
+  respectivamente
+</p>
+<p>
+  <strong>splice()</strong> - remove um ou mais elementos em qualquer posição:
+</p>
+<pre><code class="language-js">const nomes = [&quot;Maria&quot;, &quot;José&quot;, &quot;João&quot;]// Remove José (índice 1)nomes.splice(1, 1); // nomes = [&quot;Maria&quot;, &quot;João&quot;]</code></pre>
+<p>
+  O primeiro parâmetro é o índice inicial, e o segundo quantos elementos remover
+  a partir dele.
+</p>
+<p>
+  <strong>filter()</strong> - retorna um novo array somente com elementos que
+  passam em uma condição:
+</p>
+<pre><code class="language-js">const numbers = [4, 9, 16, 25, 29];const maiores20 = numbers.filter(n =&gt; n &gt; 20); // agora maiores20 é [25, 29]</code></pre>
+<p>
+  Existem outras formas como slice() e concat() que também removem elementos.
+</p>
+<h2>Concatenando Arrays</h2>
+<p>Podemos concatenar dois Arrays com o método concat():</p>
+<pre><code class="language-js">const frutas1 = [&quot;Banana&quot;, &quot;Maçã&quot;];const frutas2 = [&quot;Uva&quot;, &quot;Laranja&quot;];const todasFrutas = frutas1.concat(frutas2);// todasFrutas = [&quot;Banana&quot;, &quot;Maçã&quot;, &quot;Uva&quot;, &quot;Laranja&quot;]</code></pre>
+<p>Isso permite unir dois Arrays de forma simples.</p>
+<h2>Fazendo cópias de Arrays</h2>
+<p>
+  Devido a características do JavaScript, ao atribuir um Array para outra
+  variável, ambas apontam para o mesmo local na memória.
+</p>
+<p>
+  Para criar de fato uma cópia, deve-se manualmente copiar os elementos, ou
+  utilizar métodos como slice() e concat():
+</p>
+<pre><code class="language-js">const arr1 = [1, 2, 3];const arr2 = arr1.slice(); arr2.push(4); // arr1 permanece [1, 2, 3]// arr2 agora é [1, 2, 3, 4]</code></pre>
+<p>O slice() sem parâmetros faz uma cópia completa do Array.</p>
+<h2>String vs Array</h2>
+<p>
+  Uma string pode parecer um Array mas não possui as mesmas funcionalidades. Uma
+  string é uma sequência de caracteres, enquanto um Array é uma coleção de
+  valores.
+</p>
+<p>Strings possuem o método split() que divide a string em um Array:</p>
+<pre><code class="language-js">&quot;a,b,c&quot;.split(&quot;,&quot;); // [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;] </code></pre>
+<p>Já Arrays possuem o método join() que converte para string.</p>
+<h2>Conclusão</h2>
+<p>
+  Vimos uma introdução abrangente sobre Arrays no JavaScript, uma estrutura
+  flexível e indispensável na linguagem.
+</p>
+<p>
+  Aprendemos desde a criação e manipulação básica, até métodos avançados de
+  busca, ordenação e transformação de Arrays.
+</p>
+<p>
+  Há muito mais a se explorar, mas com estes conceitos é possível resolver uma
+  grande variedade de problemas envolvendo conjuntos de dados.
+</p>
+<p>
+  Os Arrays são estruturas versáteis presentes em todas as linguagens de
+  programação e que todo desenvolvedor deve conhecer profundamente.
+</p>
+
+<h1>Métodos de Array em JavaScript</h1>
+<h2>Introdução</h2>
+<p>
+  Nesta aula, vamos conhecer quatro métodos muito úteis para trabalhar com
+  arrays em JavaScript: map, filter, reduce e sort.
+</p>
+<p>
+  Esses métodos são chamados de higher-order functions, ou seja, funções de
+  primeira classe que recebem outras funções como argumentos ou retornam outras
+  funções.
+</p>
+<p>
+  Vamos entender como cada um desses métodos funciona e ver exemplos práticos de
+  uso.
+</p>
+<h2>Map</h2>
+<p>
+  O método <code>map()</code> é utilizado para mapear cada elemento de um array
+  para um novo elemento e retornar um novo array com os elementos mapeados.
+</p>
+<p>
+  Ou seja, o <code>map()</code> aplica uma função de callback provida para cada
+  elemento do array original e retorna um novo array com os resultados. A função
+  callback é executada para cada elemento durante a iteração.
+</p>
+<p>A sintaxe básica do <code>map()</code> é:</p>
+<pre><code class="language-js">const novoArray = arr.map(callback) </code></pre>
+<p>Onde:</p>
+<ul>
+  <li><code>arr</code> é o array original que será mapeado</li>
+  <li><code>callback</code> é a função que será executada em cada elemento</li>
+  <li><code>novoArray</code> é o novo array contendo os elementos mapeados</li>
+</ul>
+<p>Vamos ver um exemplo prático:</p>
+<pre><code class="language-js">const numeros = [2, 4, 6, 8]const dobro = numeros.map(n =&gt; n * 2) console.log(dobro) // [4, 8, 12, 16]</code></pre>
+<p>
+  No exemplo acima, passamos uma arrow function que retorna o dobro de cada
+  elemento. Dessa forma, o <code>map()</code> percorreu o array original,
+  aplicou a função em cada elemento e retornou um novo array com os valores
+  dobrados.
+</p>
+<p>É importante notar que:</p>
+<ul>
+  <li>
+    O <code>map()</code> não altera o array original, apenas retorna um novo
+  </li>
+  <li>
+    A função de callback recebe 3 parâmetros: o elemento, o índice e o array
+  </li>
+  <li>A função deve retornar o novo elemento mapeado</li>
+</ul>
+<p>Outro exemplo aplicando <code>map()</code>:</p>
+<pre><code class="language-js">const nomes = ['Ana', 'Bia', 'Gui']const nomesMaiusculos = nomes.map(nome =&gt; nome.toUpperCase())console.log(nomesMaiusculos) // ['ANA', 'BIA', 'GUI']  </code></pre>
+<p>
+  Novamente transformamos cada elemento do array (nome) em maiúsculo e
+  retornamos um novo array com os nomes maiusculizados.
+</p>
+<p>
+  O <code>map()</code> é muito útil para converter dados de um formato para
+  outro.
+</p>
+<h2>Filter</h2>
+<p>
+  O método <code>filter()</code> é utilizado para filtrar um array, retornando
+  um novo array apenas com os elementos que passaram no teste implementado pela
+  função callback provida.
+</p>
+<p>A sintaxe básica é:</p>
+<pre><code class="language-js">const novoArray = arr.filter(callback)</code></pre>
+<p>Onde:</p>
+<ul>
+  <li><code>arr</code> é o array original a ser filtrado</li>
+  <li><code>callback</code> é a função que testa cada elemento</li>
+  <li><code>novoArray</code> retorna os elementos filtrados</li>
+</ul>
+<p>Vamos a um exemplo:</p>
+<pre><code class="language-js">const idades = [22, 8, 17, 14, 65]const maiores = idades.filter(idade =&gt; idade &gt;= 18)console.log(maiores) // [22, 65]</code></pre>
+<p>
+  No exemplo acima, filtramos as idades para retornar um array apenas com os
+  maiores de 18 anos.
+</p>
+<p>
+  O filter é muito útil para filtrar arrays e retornar dados que atendem a
+  certos critérios.
+</p>
+<p>Outro exemplo:</p>
+<pre><code class="language-js">const produtos = [  { nome: 'Camisa', preco: 25 },  { nome: 'Bermuda', preco: 50 },  { nome: 'Casaco', preco: 120 }  ]const caros = produtos.filter(p =&gt; p.preco &gt;= 50) console.log(caros) // [{ nome: 'Bermuda', preco: 50 }, { nome: 'Casaco', preco: 120 }]</code></pre>
+<p>
+  Aqui filtramos os produtos com preço maior ou igual a 50 em um novo array.
+</p>
+<h2>Reduce</h2>
+<p>
+  O método <code>reduce()</code> é utilizado para reduzir o array a um único
+  valor.
+</p>
+<p>
+  Ele aplica uma função callback aos elementos do array, resultando num único
+  valor de retorno.
+</p>
+<p>A sintaxe básica é:</p>
+<pre><code class="language-js">const valor = arr.reduce(callback) </code></pre>
+<p>Onde:</p>
+<ul>
+  <li><code>arr</code> é o array a ser reduzido</li>
+  <li><code>callback</code> é a função que será executada em cada elemento</li>
+  <li><code>valor</code> é o valor final reduzido</li>
+</ul>
+<p>Vamos a um exemplo de soma de números:</p>
+<pre><code class="language-js">const numbers = [15, 25, 35, 45]const sum = numbers.reduce((acc, cur) =&gt; acc + cur)console.log(sum) // 120</code></pre>
+<p>No exemplo acima, a função callback recebe dois parâmetros:</p>
+<ul>
+  <li><code>acc</code>: o acumulador, que guarda o valor total</li>
+  <li><code>cur</code>: o elemento atual sendo processado</li>
+</ul>
+<p>
+  No primeiro loop, <code>acc</code> começa com valor <code>15</code> (primeiro
+  elemento) e <code>cur</code> vale <code>25</code> (segundo elemento). São
+  somados resultando em 40.
+</p>
+<p>
+  No segundo loop, <code>acc</code> vale 40 e <code>cur</code> vale 35. Somados
+  resultam em 75.
+</p>
+<p>E assim por diante, até retornar o valor final reduzido de 120.</p>
+<p>Outro exemplo de uso do <code>reduce()</code>:</p>
+<pre><code class="language-js">const carrinho = [  { nome: 'Notebook', qtd: 2, preco: 2500 },  { nome: 'Smartphone', qtd: 1, preco: 1500 }]const total = carrinho.reduce((acc, cur) =&gt; {  return acc + cur.qtd * cur.preco}, 0)console.log(total) // 5500</code></pre>
+<p>
+  Neste caso, calculamos o valor total do carrinho de compras somando todos os
+  subtotais.
+</p>
+<p>
+  O <code>reduce()</code> é muito poderoso para cálculos e redução de arrays!
+</p>
+<h2>Sort</h2>
+<p>
+  O método <code>sort()</code> ordena os elementos do próprio array em que foi
+  chamado e retorna o array. A ordenação padrão é ascendente.
+</p>
+<p>A sintaxe básica é:</p>
+<pre><code class="language-js">arr.sort()</code></pre>
+<p>
+  Contudo, o sort tem um comportamento interessante: por padrão, ele ordena
+  strings de acordo com a posição na tabela Unicode.
+</p>
+<p>
+  Para ordenar strings de forma mais intuitiva ou ordenar outros tipos de dados,
+  precisamos passar uma função callback que compara os elementos.
+</p>
+<p>Exemplo com strings:</p>
+<pre><code class="language-js">const frutas = ['Banana', 'Amora', 'abacaxi', 'uva'];frutas.sort(); console.log(frutas); // ['Amora', 'Banana', 'abacaxi','uva']</code></pre>
+<p>
+  Perceba que ordenou de forma errada por causa do algoritmo interno. Para
+  consertar:
+</p>
+<pre><code class="language-js">frutas.sort((a, b) =&gt; {  if (a &gt; b) return 1    if (b &gt; a) return -1    return 0})console.log(frutas) // ['abacaxi', 'Amora', 'Banana', 'uva']  </code></pre>
+<p>Agora sim ordenou corretamente!</p>
+<p>Exemplo ordenando números:</p>
+<pre><code class="language-js">const numbers = [4, 2, 6, 1]  numbers.sort((a, b) =&gt; a - b)console.log(numbers) // [1, 2, 4, 6]</code></pre>
+<p>E para inverter a ordem:</p>
+<pre><code class="language-js">numbers.sort((a, b) =&gt; b - a) console.log(numbers) // [6, 4, 2, 1]</code></pre>
+<p>Algumas observações importantes sobre o <code>sort()</code>:</p>
+<ul>
+  <li>Modifica o array original (cuidado!)</li>
+  <li>Por padrão, ordena strings por Unicode</li>
+  <li>Aceita uma função callback para comparação customizada</li>
+  <li>Retorna o array ordenado</li>
+</ul>
+<p>
+  Uma dica é usar <code>.slice()</code> antes para não modificar o array
+  original:
+</p>
+<pre><code class="language-js">const numbers = [5, 1, 4, 2, 3]const sorted = numbers.slice().sort((a, b) =&gt; a - b)console.log(numbers) // array original não foi modificado console.log(sorted) // novo array ordenado</code></pre>
+<p>
+  Assim conseguimos ordenar sem afetar o array original, o que pode ser útil.
+</p>
+<h2>Conclusão</h2>
+<p>
+  Esses são 4 métodos de array muito poderosos do JavaScript que todo
+  desenvolvedor precisa conhecer.
+</p>
+<p>
+  O <code>map()</code>, <code>filter()</code>, <code>reduce()</code> e
+  <code>sort()</code> são high-order functions que nos permitem fazer operações
+  avançadas e complexas em arrays de forma muito simples.
+</p>
+<p>
+  Dominar o uso desses métodos vai te ajudar a escrever códigos JavaScript mais
+  elegantes, concisos e declarativos para lidar com dados em arrays.
+</p>
+<p>
+  Eles nos permitem evitar loops tradicionais com for/while na maioria dos
+  casos.
+</p>
+<p>
+  Portanto, pratique bastante os exemplos para incorporar o uso desses métodos
+  no seu dia-a-dia. Isso vai melhorar suas habilidades no JavaScript moderno.
+</p>
+<p>Bons estudos!</p>
+
+<h1>Objetos Globais do JavaScript</h1>
+<h2>Introdução aos Objetos Globais</h2>
+<p>
+  Os objetos globais do JavaScript nada mais são do que objetos padrão da
+  linguagem que ficam sempre disponíveis para serem utilizados no código.
+</p>
+<p>
+  Eles funcionam de forma similar às estruturas como condicionais e repetições
+  (if, switch, while, for), que também fazem parte da linguagem JavaScript e
+  podem ser referenciadas diretamente no código sem a necessidade de serem
+  importadas ou definidas anteriormente.
+</p>
+<p>
+  A principal diferença é que os objetos globais não são estruturas, e sim
+  objetos no sentido mais literal, possuindo propriedades e métodos como
+  qualquer outro objeto JavaScript.
+</p>
+<h2>Diferença entre Objetos Globais e o Objeto Window</h2>
+<p>
+  É importante não confundir os objetos globais com o objeto de escopo global
+  window do navegador ou o escopo global de qualquer outro ambiente JavaScript.
+</p>
+<p>
+  O objeto window representa o escopo global no contexto do navegador. Por isso,
+  tudo que está disponível como propriedade ou método do window pode ser
+  acessado diretamente no código dentro do navegador, sem a necessidade de
+  referenciar o próprio objeto window.
+</p>
+<p>
+  Já os objetos globais fazem parte apenas da linguagem JavaScript, então podem
+  ser utilizados independente do ambiente.
+</p>
+<h2>Principais Objetos Globais</h2>
+<p>Alguns dos principais objetos globais do JavaScript incluem:</p>
+<ul>
+  <li><strong>Object</strong> - permite criar novos objetos JavaScript;</li>
+  <li><strong>Array</strong> - usado para criar e manipular arrays;</li>
+  <li><strong>String</strong> - para trabalhar com strings;</li>
+  <li><strong>Number</strong> - para trabalhar com números;</li>
+  <li>
+    <strong>Math</strong> - contém propriedades e métodos para realizar
+    operações matemáticas;
+  </li>
+  <li><strong>Date</strong> - para manipulação de datas;</li>
+</ul>
+<p>Essas são apenas algumas das dezenas de objetos globais disponíveis.</p>
+<p>Algumas características desses objetos:</p>
+<ul>
+  <li>Nomes sempre começam com letra maiúscula;</li>
+  <li>Representam tipos de dados internos do JavaScript;</li>
+  <li>Possuem propriedades e métodos úteis.</li>
+</ul>
+<h2>Usos Comuns dos Objetos Globais</h2>
+<p>Vejamos alguns exemplos práticos de uso desses objetos globais:</p>
+<h3>Object</h3>
+<p>O objeto global Object permite criar novos objetos JavaScript.</p>
+<pre><code class="language-js">const person = Object(); // cria um objeto vazioconst list = Object([1, 2, 3]); // cria um array preenchido</code></pre>
+<h3>Array</h3>
+<p>O Array global possui a mesma utilidade, mas específico para arrays:</p>
+<pre><code class="language-js">const list = Array(); // array vazioconst names = Array(&quot;Ana&quot;, &quot;Bia&quot;, &quot;Carlos&quot;); // array preenchido</code></pre>
+<h3>String e Number</h3>
+<p>String e Number convertem valores informados para seus respectivos tipos:</p>
+<pre><code class="language-js">String(42); // retorna a string &quot;42&quot;Number(&quot;42&quot;); // retorna o número 42  </code></pre>
+<p>Também é possível criar strings e números a partir desses objetos.</p>
+<h3>Math</h3>
+<p>
+  O objeto Math contém várias propriedades e métodos para realizar operações
+  matemáticas sem a necessidade de implementá-las manualmente:
+</p>
+<pre><code class="language-js">Math.PI // retorna 3.14159Math.pow(2, 3); // retorna 8 Math.sqrt(144); // retorna 12</code></pre>
+<h3>Date</h3>
+<p>O objeto Date permite trabalhar com datas de forma simples:</p>
+<pre><code class="language-js">Date(); // retorna a data e hora atual</code></pre>
+<h2>Conclusão</h2>
+<p>
+  Os objetos globais JavaScript provêm funcionalidades úteis que seriam mais
+  complexas de implementar manualmente.
+</p>
+<p>
+  Conhecer os objetos globais disponíveis e suas aplicações permite
+  aproveitá-los para facilitar e agilizar o desenvolvimento.
+</p>
+<p>
+  Eles não precisam ser importados ou definidos anteriormente para serem
+  utilizados, estando sempre disponíveis globalmente.
+</p>
+<p>
+  Consultar a documentação da linguagem para conhecer mais objetos globais pode
+  ajudar a potencializar ainda mais os códigos JavaScript.
+</p>

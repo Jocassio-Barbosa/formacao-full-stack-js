@@ -1,0 +1,65 @@
+<h1>A estrutura condicional switch</h1>
+<p>A aula aborda uma estrutura condicional muito útil em JavaScript chamada switch. O switch é parecido com o if no
+  sentido de que também serve para executar blocos de código baseados em uma condição ou expressão booleana. Porém, o
+  switch tem uma estrutura diferente do if.</p>
+<h2>O que é o switch?</h2>
+<p>O switch em inglês significa &quot;trocar&quot;. Ele vai testando a expressão contra vários casos, como se fosse
+  trocando entre eles e testando um por um. Quando encontra uma correspondência, executa aquele caso.</p>
+<p>É possível definir também um caso padrão que será sempre executado, independente da expressão. E dá para parar a
+  execução a qualquer momento, saindo do switch.</p>
+<h2>Estrutura básica do switch</h2>
+<p>A estrutura básica do switch é:</p>
+<pre><code class="language-js">switch(expressão) {  case valor1:     //código a ser executado    break;  case valor2:    //código a ser executado     break;  default:    //código a ser executado}</code></pre>
+<p>Analisando a estrutura:</p>
+<ul>
+  <li><code>switch</code>: palavra chave que define o início do switch.</li>
+  <li><code>(expressão)</code>: expressão ou variável a ser avaliada.</li>
+  <li><code>case valor</code>: verifica se a expressão é igual ao valor.</li>
+  <li><code>break</code>: para a execução e sai do switch.</li>
+  <li><code>default</code>: caso executado se nenhum case corresponder.</li>
+</ul>
+<p>O case é como se fosse o &quot;if&quot; dentro do switch. Cada case verifica se a expressão corresponde ao seu valor.
+  Quando encontra, executa aquele código interno.</p>
+<p>O break é importante para parar a execução depois que um case foi correspondido. Senão, ele continuará executando os
+  próximos casos mesmo que não correspondam.</p>
+<p>O default funciona como o &quot;else&quot; do if. É executado caso nenhum case tenha sido verdadeiro.</p>
+<h2>Exemplo prático de switch</h2>
+<p>Vamos ver um exemplo prático de switch no JavaScript:</p>
+<pre><code class="language-js">let resultado = &quot;B&quot;;switch (resultado) {  case &quot;A&quot;:    alert(&quot;O resultado é A&quot;);     break;    case &quot;B&quot;:    alert(&quot;O resultado é B&quot;);    break;  case &quot;C&quot;:     alert(&quot;O resultado é C&quot;);    break;    default:     alert(&quot;Finalizando&quot;);}</code></pre>
+<p>Aqui definimos uma variável resultado com valor &quot;B&quot;. Este valor é passado para a expressão do switch.</p>
+<p>Então ele vai verificar caso a caso:</p>
+<ol>
+  <li>Case &quot;A&quot; não corresponde</li>
+  <li>Case &quot;B&quot; corresponde. Executa o alerta &quot;O resultado é B&quot;</li>
+  <li>Encontra o break, então para a execução e sai.</li>
+</ol>
+<p>Perceba que sem os breaks, ele iria executar os próximos casos mesmo sem corresponderem.</p>
+<p>O default também seria executado ao final.</p>
+<h2>Usando switch com interação</h2>
+<p>O switch permite avaliar não só valores fixos, mas qualquer tipo de expressão ou variável. Isso permite criar
+  interações com usuário.</p>
+<p>Exemplo:</p>
+<pre><code class="language-js">let resultado = prompt(&quot;Escolha uma alternativa: \nA\nB\nC&quot;); switch (resultado) {  case &quot;A&quot;:    alert(&quot;Resultado é A&quot;);     break;    case &quot;B&quot;:     alert(&quot;Resultado é B&quot;);    break;  case &quot;C&quot;:    alert(&quot;Resultado é C&quot;);    break;  }</code></pre>
+<p>Aqui usamos prompt() para pedir uma entrada do usuário e armazenamos na variável resultado.</p>
+<p>Essa entrada é então avaliada no switch para exibir a mensagem correspondente.</p>
+<h2>Usando números no switch</h2>
+<p>Os cases não precisam ser apenas strings. Podemos avaliar números:</p>
+<pre><code class="language-js">let num = parseInt(prompt(&quot;Digite um número&quot;));switch (num) {  case 1:    alert(&quot;Número 1&quot;);    break;  case 2:    alert(&quot;Número 2&quot;);     break;    case 3:    alert(&quot;Número 3&quot;);    break;  default:    alert(&quot;Número não identificado&quot;);  }</code></pre>
+<p>Usamos parseInt() para converter a entrada para número e depois comparamos com os cases numéricos.</p>
+<p>Assim testamos valores numéricos facilmente.</p>
+<h2>Vantagens do switch</h2>
+<p>O switch tem algumas vantagens em relação uma cadeia de ifs/elses quando queremos testar múltiplos valores:</p>
+<ul>
+  <li>Código mais limpo e fácil de ler</li>
+  <li>Execução mais rápida em alguns casos</li>
+  <li>Permite definir um caso padrão</li>
+  <li>Podemos sair facilmente da estrutura com break</li>
+</ul>
+<p>Então o switch é muito útil quando temos uma variável que assumirá poucos valores distintos.</p>
+<h2>Conclusão</h2>
+<p>Em resumo, o switch é uma estrutura condicional poderosa para avaliar uma expressão/variável contra múltiplos casos.
+</p>
+<p>Sua estrutura permite definir casos e um padrão de forma fácil.</p>
+<p>Por poder parar a execução com break, o switch economiza processamento desnecessário.</p>
+<p>Dessa forma, o switch é perfeito para situações em que se precisa tomar decisões com variáveis que assumem um
+  conjunto limitado de valores.</p>
